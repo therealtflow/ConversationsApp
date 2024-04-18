@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textViewTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="To"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewDelete"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textViewFrom" />
+
+        <ImageView
+            android:id="@+id/imageViewDelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/textViewSeenOrSent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewSeenOrSent"
+            app:srcCompat="@drawable/ic_trash" />
+
+        <TextView
+            android:id="@+id/textViewFrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="From"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewDelete"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewTitle"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Title"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewDelete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="144dp"
+            android:layout_height="19dp"
+            android:layout_marginTop="8dp"
+            android:text="Date"
+            app:layout_constraintStart_toStartOf="@+id/textViewTo"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTo" />
+
+        <TextView
+            android:id="@+id/textViewSeenOrSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seen/Sent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
